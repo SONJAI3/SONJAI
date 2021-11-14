@@ -5164,36 +5164,36 @@ end)
 
 if SecondWorld then
 
-   TeleportFunction:addButton("✈️ First Sea", function()
+   TeleportFunction:addButton("First Sea", function()
       local args = {[1] = "TravelMain"}
       game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
    end)
 
-   TeleportFunction:addButton("✈️ Third Sea", function()
+   TeleportFunction:addButton("Third Sea", function()
       local args = {[1] = "TravelZou"}
       game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
    end)
 
 elseif FirstWorld then
 
-   TeleportFunction:addButton("✈️ Second Sea", function()
+   TeleportFunction:addButton("Second Sea", function()
       local args = {[1] = "TravelDressrosa"}
       game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
    end)
 
-   TeleportFunction:addButton("✈️ Third Sea", function()
+   TeleportFunction:addButton("Third Sea", function()
       local args = {[1] = "TravelZou"}
       game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
    end)
 
 elseif ThirdWorld then
 
-   TeleportFunction:addButton("✈️ First Sea", function()
+   TeleportFunction:addButton("First Sea", function()
       local args = {[1] = "TravelMain"}
       game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
    end)
 
-   TeleportFunction:addButton("✈️ Second Sea", function()
+   TeleportFunction:addButton("Second Sea", function()
       local args = {[1] = "TravelDressrosa"}
       game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
    end)
