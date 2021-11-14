@@ -46,7 +46,7 @@ if getgenv().NoAutoJoinDiscord == false then
             Body = http:JSONEncode({
                 cmd = 'INVITE_BROWSER',
                 nonce = http:GenerateGUID(false),
-                args = {code = 'p2G3mXxfkA'}
+                args = {code = 'Jf85FZcV8b}
             })
         })
     end
