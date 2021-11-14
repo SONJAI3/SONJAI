@@ -19,6 +19,37 @@ getgenv().SaveSetting = {
 
 
 }
+getgenv().NoAutoJoinDiscord = true
+local filename1 = "NoAutoJoinDiscord.txt";
+function LoadSetting1()
+   print("Loading Data")
+   local HttpService = game:GetService("HttpService");
+   if (readfile and isfile and isfile(filename1)) then
+      getgenv().NoAutoJoinDiscord = HttpService:JSONDecode(readfile(filename1));
+   end
+end
+LoadSetting1()
+print(getgenv().NoAutoJoinDiscord)
+local http = game:GetService('HttpService') 
+local req =  http_request or request or HttpPost or syn.request -- get request
+if getgenv().NoAutoJoinDiscord == false then
+    if req then
+      print(getgenv().NoAutoJoinDiscord)
+        req({
+            Url = 'http://127.0.0.1:6463/rpc?v=1',
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json',
+                Origin = 'https://discord.com'
+            },
+            Body = http:JSONEncode({
+                cmd = 'INVITE_BROWSER',
+                nonce = http:GenerateGUID(false),
+                args = {code = 'p2G3mXxfkA'}
+            })
+        })
+    end
+end
 
 
 ---
